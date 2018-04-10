@@ -1,0 +1,39 @@
+<h1>Edit Course</h1>
+<form (ngSubmit)="update()" novalidate>
+    <div>
+        <label for="title">Title</label>
+        <div>
+            <input type="text" required [(ngModel)]="course.title"
+                   name="title" placeholder="Course Code">
+        </div>
+    </div>
+    <div>
+        <label for="code">Code</label>
+        <div>
+            <input type="text" required 
+                      [(ngModel)]="course.content" name="name" placeholder="Name">
+                
+        </div>
+    </div>
+    <div>
+        <label for="name">Name</label>
+        <div>
+            <input type="text" required
+                   [(ngModel)]="course.name" name="name" placeholder="Name">
+
+        </div>
+    </div>
+
+    <div>
+        <label for="session">Session</label>
+        <div>
+            <input type="text" required
+                   [(ngModel)]="course.session" name="session" placeholder="Section eg : 001">
+
+        </div>
+    </div>
+    <div>
+        <input type="submit" value="Update">
+    </div>
+    <strong>{{errorMessage}}</strong>
+</form>
